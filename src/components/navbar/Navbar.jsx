@@ -6,12 +6,15 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import SearchIcon from '@mui/icons-material/Search';
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <span>keremsocial</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span>keremsocial</span>
+        </Link>
         <HomeOutlinedIcon />
         <NightlightOutlinedIcon />
         <GridViewOutlinedIcon />
