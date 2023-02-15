@@ -1,8 +1,8 @@
-import "./home.scss"
+import "./home.scss";
 
 const Home = () => {
   return (
-    <div className = "Home">
+    <div className="Home">
       <h1>Home</h1>
       <h1>Home</h1>
       <h1>Home</h1>
@@ -55,7 +55,7 @@ const Home = () => {
       <h1>Home</h1>
       <h1>Home</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
