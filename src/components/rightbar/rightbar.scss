@@ -1,71 +1,77 @@
+@import "../../style.scss";
+
 .rightBar {
-  flex: 3;
-  position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
-  overflow: scroll;
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-  .container {
-    padding: 20px;
-    .item {
+    .container {
       padding: 20px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      margin-bottom: 20px;
-      font-size: 13px;
-      span {
-        color: grey;
-      }
-      .user {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 15px;
-        .userInfo {
+      .item {
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        background-color: themed("bg");
+        span {
+          color: grey;
+        }
+        .user {
           display: flex;
           align-items: center;
-          gap: 10px;
-          position: relative;
-          img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-          p {
-            color: grey;
-          }
-          span {
-            font-weight: 500;
-            color: black;
-          }
-        }
-        .online {
-          width: 10px;
-          height: 10px;
-          background-color: limegreen;
-          border-radius: 50%;
-          position: absolute;
-          top: 0;
-          left: 25px;
-        }
-        .buttons {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          button {
-            color: white;
-            cursor: pointer;
-            padding: 5px;
-            border: none;
-            &:first-child {
-              background-color: #5271ff;
+          justify-content: space-between;
+          margin-top: 15px;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
             }
-            &:last-child {
-              background-color: #f0544f;
+            p {
+              color: themed("textColorSoft");
+            }
+            span {
+              font-weight: 500;
+              color: themed("textColor");
+            }
+          }
+          .online {
+            width: 10px;
+            height: 10px;
+            background-color: limegreen;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 25px;
+          }
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button {
+              color: white;
+              cursor: pointer;
+              padding: 5px;
+              border: none;
+              &:first-child {
+                background-color: #5271ff;
+              }
+              &:last-child {
+                background-color: #f0544f;
+              }
             }
           }
         }
