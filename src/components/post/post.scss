@@ -1,0 +1,74 @@
+@import "../../style.scss";
+
+.post {
+  @include themify($themes) {
+    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    border-radius: 20px;
+    background-color: themed("bg");
+    color: themed("textColor");
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .userText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span {
+              font-weight: 500;
+            }
+            .shareTime {
+              font-weight: 400;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+        }
+        img {
+          max-height: 500px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .interaction {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .icon {
+          }
+          span {
+          }
+        }
+      }
+    }
+  }
+}
