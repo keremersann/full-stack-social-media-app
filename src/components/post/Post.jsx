@@ -6,9 +6,11 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Comments from "../comments/Comments";
 
 const Post = ({ props }) => {
   console.log(props);
+  const [commentsOpen, setCommentsOpen] = useState(false);
 
   // TEMPORARY
   const [liked, setLiked] = useState(false);
@@ -38,17 +40,18 @@ const Post = ({ props }) => {
         <div className="interaction">
           <div className="item">
             {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
-            <span>Likes</span>
+            <span>16 Likes</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => setCommentsOpen(!commentsOpen)}>
             <ChatBubbleOutlineOutlinedIcon />
-            <span>Comments</span>
+            <span>3 Comments</span>
           </div>
           <div className="item">
             <ShareOutlinedIcon />
             <span>Share</span>
           </div>
         </div>
+        {commentsOpen && <Comments />}
       </div>
     </div>
   );
