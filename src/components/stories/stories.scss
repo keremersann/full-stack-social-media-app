@@ -1,13 +1,29 @@
+@import "../../style.scss";
+
 .stories {
   display: flex;
   align-items: center;
   gap: 10px;
   height: 250px;
   margin-bottom: 30px;
+  @include mobile {
+    height: 50px;
+  }
+
+  @include tablet {
+    height: 150px;
+  }
   .story {
     flex: 1;
     overflow: hidden;
     position: relative;
+
+    @include mobile {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+
     img {
       height: 100%;
       width: 100%;
@@ -20,6 +36,9 @@
       bottom: 10px;
       left: 10px;
       font-weight: 500;
+      @include mobile {
+        display: none;
+      }
     }
     button {
       position: absolute;
@@ -37,6 +56,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include mobile {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 }

@@ -26,6 +26,12 @@
     }
     .profileContainer {
       padding: 20px 70px;
+      @include mobile {
+        padding: 10px;
+      }
+      @include tablet {
+        padding: 20px;
+      }
       .uInfo {
         background-color: themed("bg");
         color: themed("textColor");
@@ -40,11 +46,25 @@
         height: 180px;
         margin-bottom: 20px;
 
+        @include mobile {
+          flex-direction: column;
+          margin-top: 100px;
+          padding: 20px;
+          height: 30vh;
+        }
+        @include tablet {
+          margin-top: 30px;
+        }
+
         .left {
           flex: 1;
           display: flex;
           align-items: center;
           gap: 10px;
+
+          @include tablet {
+            flex-wrap: wrap;
+          }
 
           a {
             color: themed("textColorSoft");

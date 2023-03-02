@@ -23,7 +23,7 @@ const Post = ({ props }) => {
             <img src={props.profilePic} alt="" />
             <div className="userText">
               <Link
-                to={`profiles/${props.userId}`}
+                to={`profile/${props.userId}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <span>{props.name}</span>
